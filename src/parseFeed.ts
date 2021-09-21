@@ -4,7 +4,7 @@ import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
 export const handle: ScheduledHandler = async () => {
   const feed = await parseFeed();
-  //await persist(feed);
+  await persist(feed);
 };
 
 const parseFeed = async () => {
